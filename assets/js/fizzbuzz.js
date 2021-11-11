@@ -2,12 +2,18 @@ let totalNumber = 0;
 
 let resultsParent = document.getElementById('result-parent')
 
+function resetInput() {
+  document.getElementById('input-total').value = null
+}
+
 function getTotalNumber() {
   totalNumber = document.getElementById('input-total').value
 
   for(let index = 1; index <= totalNumber; index++) {
     fizzbuzz(index)
   }
+
+  resetInput()
 }
 
 function fizzbuzz(index) {
