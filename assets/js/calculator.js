@@ -64,6 +64,11 @@ function performCalculation() {
   calculator.displayNumber = result
 }
 
+function resetOperation() {
+  calculator.operator = null
+  calculator.waitingForSecondNumber = false
+}
+
 const buttons = document.querySelectorAll(".button")
 
 for(let button of buttons) {
@@ -76,6 +81,7 @@ for(let button of buttons) {
       return
     } else if(target.classList.contains('equals')) {
       performCalculation()
+      resetOperation()
       updateDisplay()
       return
     } else if(target.classList.contains('operator')) {
