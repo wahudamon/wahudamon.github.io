@@ -1,5 +1,4 @@
 let totalNumber = 0
-
 let resultsParent = document.getElementById('result-parent')
 
 function resetInput() {

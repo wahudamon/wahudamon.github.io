@@ -35,6 +35,7 @@ function fibonacci() {
 
   resultElement.innerText = firstNumber
   resultsParent.append(resultElement)
+  
   nextNumber = firstNumber + secondNumber
   firstNumber = secondNumber
   secondNumber = nextNumber
