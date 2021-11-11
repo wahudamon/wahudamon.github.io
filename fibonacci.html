@@ -21,15 +21,21 @@
     <nav>
       <ul>
         <li><a href="index.html">Online Calculator</a></li>
-        <li><a href="index.html">Fizz Buzz</a></li>
-        <li><a href="index.html">Fibonacci</a></li>
+        <li><a href="fizzbuzz.html">Fizz Buzz</a></li>
+        <li><a href="fibonacci.html">Fibonacci</a></li>
       </ul>
     </nav>
   </header>
   <main>
     <div>
       <h2>Fibonacci</h2>
-      
+      <div style="text-align: center;">
+        <input id="input-total" type="text" name="totalNumber" placeholder="Masukkan total angka..." />
+        <button onclick="getTotalNumber()">Submit</button>
+        <div>
+          <ul id="result-parent"></ul>
+        </div>
+      </div>
     </div>
   </main>
 </body>
