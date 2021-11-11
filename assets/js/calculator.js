@@ -59,6 +59,8 @@ function performCalculation() {
     result = parseInt(calculator.firstNumber) * parseInt(calculator.displayNumber)
   } else if(calculator.operator === "/") {
     result = parseInt(calculator.firstNumber) / parseInt(calculator.displayNumber)
+  } else if(calculator.operator === "%") {
+    result = (parseInt(calculator.firstNumber) / 100) * parseInt(calculator.displayNumber)
   }
 
   calculator.displayNumber = result
@@ -79,6 +81,10 @@ for(let button of buttons) {
       clearCalculator()
       updateDisplay()
       return
+    } else if(target.classList.contains('negative')) {
+      inverseNumber();
+      updateDisplay();
+      return;
     } else if(target.classList.contains('equals')) {
       performCalculation()
       resetOperation()
