@@ -53,8 +53,12 @@ function performCalculation() {
   let result = 0
   if(calculator.operator === "+") {
     result = parseInt(calculator.firstNumber) + parseInt(calculator.displayNumber)
-  } else {
+  } else if(calculator.operator === "-") {
     result = parseInt(calculator.firstNumber) - parseInt(calculator.displayNumber)
+  } else if(calculator.operator === "x") {
+    result = parseInt(calculator.firstNumber) * parseInt(calculator.displayNumber)
+  } else if(calculator.operator === "/") {
+    result = parseInt(calculator.firstNumber) / parseInt(calculator.displayNumber)
   }
 
   calculator.displayNumber = result
@@ -68,10 +72,6 @@ for(let button of buttons) {
 
     if(target.classList.contains('clear')) {
       clearCalculator()
-      updateDisplay()
-      return
-    } else if(target.classList.contains('negative')) {
-      inverseNumber()
       updateDisplay()
       return
     } else if(target.classList.contains('equals')) {
